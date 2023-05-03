@@ -33,3 +33,29 @@
 
    - `npx prisma init` を実行
    - .env の`DATABASE_URL` を書き換える
+
+6. schema を定義する
+
+   - prisma/schema.prisma に model を追加
+   - 今回は以下のテーブル構成とする
+
+     ```mermaid
+     erDiagram
+     Post ||--o{ Comment: "1つの投稿は0以上のコメントを持つ"
+
+     Post {
+        Int id PK
+        String title "投稿タイトル"
+        String body "投稿内容"
+        DateTime created_at
+        DateTime deleted_at
+     }
+
+     Comment {
+        Int id PK
+        Int postId FK
+        String comment "コメント内容"
+        DateTime created_at
+        DateTime deleted_at
+     }
+     ```
