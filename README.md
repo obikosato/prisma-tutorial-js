@@ -59,3 +59,9 @@
         DateTime deleted_at
      }
      ```
+
+7. マイグレーションをする
+
+   ```
+   npx prisma migrate dev --name init
+   ```
