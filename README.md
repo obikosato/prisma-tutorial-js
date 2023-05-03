@@ -14,3 +14,8 @@
    npm init -y
    npm i prisma express nodemon @prisma/client
    ```
+
+3. server.js に express server 起動するところを書く
+   - `PORT` は被らないように適当に指定する
+   - start を nodemon に書き換えておく
+   - `npm start` でサーバーを起動する
