@@ -65,3 +65,5 @@
    ```
    npx prisma migrate dev --name init
    ```
+
+8. `npx prisma studio` で、DB の中身をブラウザで確認できる
