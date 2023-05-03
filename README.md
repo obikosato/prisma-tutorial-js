@@ -67,3 +67,9 @@
    ```
 
 8. `npx prisma studio` で、DB の中身をブラウザで確認できる
+
+9. POST, GET, PUT, DELETE を定義
+   - prisma の関数を使って、DB 操作できる
+   - `app.use(express.json());` はリクエストの json を受け取るためのミドルウェア関数（必要なので追加）
+   - http://localhost:8001 に HTTP リクエストを実行してみる
+   - prisma studio で中身を確認し、動作を確かめる
